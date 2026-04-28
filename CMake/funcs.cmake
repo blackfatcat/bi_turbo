@@ -14,7 +14,7 @@ Function(create_example)
     Add_Executable(${EXAMPLE_NAME} ${EXAMPLE_FILES})
 
     Set_Target_Properties(${EXAMPLE_NAME} PROPERTIES LINKER_LANGUAGE CXX)
-    Target_Link_Libraries(${EXAMPLE_NAME} PRIVATE ${MODULE_DEPENDENCIES})
+    Target_Link_Libraries(${EXAMPLE_NAME} PRIVATE ${EXAMPLE_DEPENDENCIES})
     Target_Include_Directories(${EXAMPLE_NAME} PUBLIC "${EXAMPLE_DIRECTORY}/public" "${EXAMPLE_INCLUDE_DIRS}" PRIVATE "${EXAMPLE_DIRECTORY}/private")
 
 EndFunction()
