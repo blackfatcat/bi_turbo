@@ -11,5 +11,6 @@ Include("${CMAKE_BINARY_DIR}/cmake/CPM.cmake")
 CPMAddPackage(
     NAME tasker
     GITHUB_REPOSITORY "blackfatcat/tasker"
-    GIT_TAG main
+    GIT_TAG dev
+    OPTIONS "TSKR_STANDALONE OFF"
 )
