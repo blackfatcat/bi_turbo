@@ -49,7 +49,7 @@
       "name": "Windows Debug",
       "displayName": "x64 Debug",
       "inherits": "WindowsBase",
-      "binaryDir": "${sourceDir}/build/debug/win64",
+      "binaryDir": "${sourceDir}/build/win64",
       "architecture": {
         "value": "x64",
         "strategy": "external"
@@ -62,7 +62,7 @@
       "name": "Windows Release",
       "displayName": "x64 Release",
       "inherits": "WindowsBase",
-      "binaryDir": "${sourceDir}/build/release/win64",
+      "binaryDir": "${sourceDir}/build/win64",
       "architecture": {
         "value": "x64",
         "strategy": "external"
@@ -75,7 +75,7 @@
       "name": "Linux Debug",
       "displayName": "x64 Debug",
       "inherits": "LinuxBase",
-      "binaryDir": "${sourceDir}/build/debug/linux64",
+      "binaryDir": "${sourceDir}/build/linux64",
       "architecture": {
         "value": "x64",
         "strategy": "external"
@@ -88,7 +88,7 @@
       "name": "Linux Release",
       "displayName": "x64 Release",
       "inherits": "LinuxBase",
-      "binaryDir": "${sourceDir}/build/release/linux64",
+      "binaryDir": "${sourceDir}/build/linux64",
       "architecture": {
         "value": "x64",
         "strategy": "external"
@@ -101,7 +101,7 @@
       "name": "Macos Debug",
       "displayName": "Arm64 Debug",
       "inherits": "MacosBase",
-      "binaryDir": "${sourceDir}/build/debug/macos64",
+      "binaryDir": "${sourceDir}/build/macos64",
       "architecture": {
         "value": "arm64",
         "strategy": "external"
@@ -114,7 +114,7 @@
       "name": "Macos Release",
       "displayName": "Arm64 Release",
       "inherits": "MacosBase",
-      "binaryDir": "${sourceDir}/build/release/macos64",
+      "binaryDir": "${sourceDir}/build/macos64",
       "architecture": {
         "value": "arm64",
         "strategy": "external"
