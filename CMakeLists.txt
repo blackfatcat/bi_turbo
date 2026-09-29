@@ -2,6 +2,8 @@ CMake_Minimum_Required(VERSION 4.0.0)
 
 Project(bi_turbo VERSION 0.0.1 LANGUAGES CXX)
 
+option(BT_STANDALONE "Build the project by itself" OFF)
+
 If (APPLE)
     Enable_Language(OBJCXX)
 Endif ()
@@ -18,4 +20,7 @@ Include(CMake/funcs.cmake)
 
 Include(CMake/deps.cmake)
 Include(CMake/mods.cmake)
-Include(CMake/examples.cmake)
+
+If(NOT ${BT_STANDALONE})
+    Include(CMake/examples.cmake)
+Endif ()
