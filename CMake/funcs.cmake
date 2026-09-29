@@ -30,13 +30,18 @@ Function(create_module)
         Message(FATAL_ERROR "create_module requires a valid NAME, DIRECTORY and LANGUAGE.")
     endif ()
 
+    message("Module name: ${MODULE_NAME}")
+    message("Include dirs: ${MODULE_INCLUDE_DIRS}")
+    message("Module dir: ${MODULE_DIRECTORY}")
+    message("Module deps: ${MODULE_DEPENDENCIES}")
+
+
     File(GLOB_RECURSE MODULE_FILES "${MODULE_DIRECTORY}/public/*.hpp" "${MODULE_DIRECTORY}/private/*.cpp" "${MODULE_DIRECTORY}/*.mm")
     Add_Library(${MODULE_NAME} STATIC ${MODULE_FILES})
 
     Set_Target_Properties(${MODULE_NAME} PROPERTIES LINKER_LANGUAGE ${MODULE_LANGUAGE})
     Target_Link_Libraries(${MODULE_NAME} PUBLIC ${MODULE_DEPENDENCIES})
     Target_Include_Directories(${MODULE_NAME} PUBLIC "${MODULE_DIRECTORY}/public" PUBLIC "${MODULE_INCLUDE_DIRS}" PRIVATE "${MODULE_DIRECTORY}/private")
-    message(${MODULE_INCLUDE_DIRS})
     Set(${MODULE_NAME}_Include_Dir "${MODULE_DIRECTORY}/public" PARENT_SCOPE)
 EndFunction()
 
