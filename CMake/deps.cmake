@@ -8,9 +8,10 @@ if (NOT EXISTS "${CMAKE_BINARY_DIR}/cmake/CPM.cmake")
 endif ()
 Include("${CMAKE_BINARY_DIR}/cmake/CPM.cmake")
 
+# TODO: swap out for bt_ecs
 CPMAddPackage(
     NAME tasker
     GITHUB_REPOSITORY "blackfatcat/tasker"
     GIT_TAG dev
-    OPTIONS "TSKR_STANDALONE OFF"
+    OPTIONS "TSKR_STANDALONE OFF" # TODO: On??
 )
