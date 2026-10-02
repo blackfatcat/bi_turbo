@@ -27,7 +27,6 @@ jobs:
         uses: ilammy/msvc-dev-cmd@v1
         with:
           arch: x64
-          toolset: 14.XX
           vsversion: 18
 
       - name: Configure with CMake (Visual Studio 17 2022)
