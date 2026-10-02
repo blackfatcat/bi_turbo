@@ -27,7 +27,8 @@ jobs:
         uses: ilammy/msvc-dev-cmd@v1
         with:
           arch: x64
-          toolset: 18.XX
+          toolset: 14.XX
+          vsversion: 18
 
       - name: Configure with CMake (Visual Studio 17 2022)
         run: |
@@ -84,14 +85,14 @@ jobs:
           sudo apt-get install -y build-essential cmake
 
       - name: build-wasm
-        run: emcmake cmake . -B build-wasm
+        run: emcmake cmake . -B build/wasm
 
       - name: compile-wasm
         run: |
-          cmake --build build-wasm --target clean
-          cmake --build build-wasm
+          cmake --build build/wasm --target clean
+          cmake --build build/wasm
           mkdir bin
           mkdir bin/wasm
-          emcc -g build-wasm/libbi_turbo.a -o bin/wasm/bi_turbo.js
+          emcc -g build/wasm/libbi_turbo.core.a -o bin/wasm/bi_turbo.core.js
 
       
