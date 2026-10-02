@@ -1,8 +1,9 @@
 #pragma once
 
-#include "tasker.hpp"
+// #include "tasker.hpp"
 
 static void test()
 {
-	tskr::Tasker tasker;
+	// tskr::Tasker tasker;
+	// tasker.run();
 }
