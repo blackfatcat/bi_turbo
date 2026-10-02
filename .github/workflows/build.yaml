@@ -29,10 +29,10 @@ jobs:
           arch: x64
           vsversion: 18
 
-      - name: Configure with CMake (Visual Studio 17 2022)
+      - name: Configure with CMake (Visual Studio 18 2026)
         run: |
           cmake -S . -B build `
-            -G "Visual Studio 18 2022" `
+            -G "Visual Studio 18 2026" `
             -A x64 `
             -DTSKR_BUILD_EXAMPLES_ALL=1
 
